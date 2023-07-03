@@ -1,0 +1,50 @@
+module.exports = {
+  env: { browser: true, es2020: true },
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+  ],
+  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
+  settings: { react: { version: "18.2" } },
+  plugins: ["react-refresh", "import"],
+  rules: {
+    quotes: ["error", "double"],
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "React",
+      },
+    ],
+    "no-shadow": "off",
+    "no-console": "off",
+    "no-param-reassign": "off",
+    "no-trailing-spaces": "off",
+    "no-case-declarations": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["builtin", "external"],
+          ["internal"],
+          ["parent", "sibling"],
+        ],
+        "newlines-between": "always",
+      },
+    ],
+    "import/named": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/no-array-index-key": "off",
+    "react/jsx-no-bind": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "arrow-body-style": "off",
+    "default-param-last": "off",
+    "camelcase": "off",
+    "eol-last": "off",
+  },
+};
