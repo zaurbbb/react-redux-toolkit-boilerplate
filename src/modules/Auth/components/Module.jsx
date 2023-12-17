@@ -29,4 +29,4 @@ Module.propTypes = {
   adminLogin: PropTypes.func.isRequired,
 };
 
-export default connect(mapDispatchToProps)(Module);
+export default connect(null, mapDispatchToProps)(Module);
